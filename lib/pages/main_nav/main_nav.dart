@@ -72,12 +72,25 @@ class _MainNavState extends State<MainNav> {
               label: "Pesanan",
             ),
             BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                "assets/icons/chat-icon2.svg",
-                width: 22,
-                colorFilter: ColorFilter.mode(selectedIndex == 3 ? greenColor : black3Color, BlendMode.srcIn),
+              icon: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  SvgPicture.asset(
+                    "assets/icons/chat-icon2.svg",
+                    width: 22,
+                    colorFilter: ColorFilter.mode(selectedIndex == 3 ? greenColor : black3Color, BlendMode.srcIn),
+                  ),
+                  Positioned(
+                    right: -2,
+                    top: -2,
+                    child: CircleAvatar(
+                      radius: 5.0,
+                      backgroundColor: redColor,
+                    ),
+                  ),
+                ],
               ),
-              label: "Pesanan",
+              label: "Chat",
             ),
           ],
         ),

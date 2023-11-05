@@ -3,6 +3,7 @@ import 'package:clone_ui_gojek/pages/promo/widget/card_voucher.dart';
 import 'package:clone_ui_gojek/shared/theme/theme_color.dart';
 import 'package:clone_ui_gojek/shared/widget/button_outline.dart';
 import 'package:clone_ui_gojek/shared/widget/card_minimarket.dart';
+import 'package:clone_ui_gojek/shared/widget/card_product_horizontal_widget.dart';
 import 'package:clone_ui_gojek/shared/widget/card_product_vertical_widget.dart';
 import 'package:clone_ui_gojek/shared/widget/card_slider_widget.dart';
 import 'package:clone_ui_gojek/shared/widget/card_title.dart';
@@ -450,20 +451,52 @@ class _PromoPageState extends State<PromoPage> {
             ),
 
             ///
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 20.0),
             const TitleWidget(
               title: "Takasimuraaa!",
               lihatSemua: "Lihat semua",
             ),
-            const Divider(),
-            const SizedBox(
-              height: 12.0,
+            const SizedBox(height: 12.0),
+            SizedBox(
+              height: 120,
+              child: ListView(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                scrollDirection: Axis.horizontal,
+                clipBehavior: Clip.none,
+                children: const [
+                  CardProductHorizontal(
+                    imgUrl:
+                        'https://asset.kompas.com/crops/7IdRwZpcpYsImnHe2nB5pZrPTgM=/0x0:1000x667/750x500/data/photo/2020/08/05/5f2a43ad5bd07.jpg',
+                    jarak: '0.15 km • 24 min',
+                    title: '3 Pcs Tahu Bakso',
+                    subTitle: 'Bakso Malang Cak Yuy, Pesona Cilebut',
+                    harga: '6.800',
+                    hargaCoret: '7.500',
+                  ),
+                  SizedBox(width: 12.0),
+                  CardProductHorizontal(
+                    imgUrl: 'https://www.dapurkobe.co.id/wp-content/uploads/lele-goreng-kremes.jpg',
+                    jarak: '0.21 km • 25 min',
+                    title: 'Lele Goreng Kremes + Nasi + Es Teh Manis',
+                    subTitle: 'Frozen Food N Snack naza',
+                    harga: '28.000',
+                    hargaCoret: '35.000',
+                  ),
+                  SizedBox(width: 12.0),
+                  CardProductHorizontal(
+                    imgUrl: 'https://cdn.idntimes.com/content-images/post/20180909/ce82604102e49675f84fbb3f347c564c.jpg',
+                    jarak: '0.22 km • 32 min',
+                    title: 'Kupat Tahu + Telur Dadar',
+                    subTitle: 'Sate Barokah Family, Cilebut',
+                    harga: '18.000',
+                    hargaCoret: '22.000',
+                  ),
+                ],
+              ),
             ),
-            const TitleWidget(title: "Promo spesial dari GoFood"),
-            const Divider(),
 
             ///
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 20.0),
             const TitleSubtitleWidget(
               logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/1280px-Gopay_logo.svg.png",
               title: "Borong kebutuhan harian",
@@ -509,15 +542,6 @@ class _PromoPageState extends State<PromoPage> {
                 ],
               ),
             ),
-
-            ///
-            const SizedBox(height: 20.0),
-            const TitleSubtitleWidget(
-              logoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/1280px-Gopay_logo.svg.png",
-              title: "Pilih dan beli Paket Voucher GoPay sekarang!",
-              subtitle: "Dapatkan berbagai voucher cashback khusus buat kamu. Harga mulai Rp100. Beli sekarang!",
-            ),
-            const Divider(),
 
             ///
             const SizedBox(height: 20.0),
@@ -616,7 +640,7 @@ class _PromoPageState extends State<PromoPage> {
             ),
 
             ///
-            const SizedBox(height: 1200.0),
+            const SizedBox(height: 20.0),
           ],
         ),
       ),
