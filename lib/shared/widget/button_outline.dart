@@ -23,10 +23,10 @@ class _ButtonOutlineWidgetState extends State<ButtonOutlineWidget> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
-          color: onPressed ? greenColor : whiteColor,
+          color: onPressed ? greenColor : black3Color.withOpacity(0.1),
           borderRadius: const BorderRadius.all(Radius.circular(20)),
           border: Border.all(
-            color: onPressed ? greenColor : black3Color,
+            color: onPressed ? greenColor : black3Color.withOpacity(0.4),
           ),
         ),
         child: Center(

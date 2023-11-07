@@ -451,8 +451,7 @@ class BerandaPage extends StatelessWidget {
                     "title": "Tokopedia",
                   },
                   {
-                    "logo":
-                        "https://tdwcontent.telkomsel.com//sites/default/files/images/pages/assets/Telkomsel_Products%2BServices_MyTelkomsel_Red_RGB%20%281%29.png",
+                    "logo": "https://www.awanapps.com/wp-content/uploads/2022/10/MyTelkomsel.png",
                     "title": "My Telkomsel",
                   },
                 ];
